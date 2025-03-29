@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: ["main", "develop"]
   schedule:
-    - cron: "24 9 * * 3"
+    - cron: "21 16 * * 5"
 
 jobs:
   analyze:
@@ -24,8 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - language: javascript-typescript
-            build-mode: none
+          - language: go
+            build-mode: autobuild
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
