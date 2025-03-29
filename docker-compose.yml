@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: .
+      dockerfile: docker/Dockerfile
     container_name: frontend
     restart: unless-stopped
     networks:
